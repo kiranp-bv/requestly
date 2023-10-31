@@ -1,0 +1,33 @@
+.login-box {
+    /* display: flex; */
+}
+
+.login-field-section {
+    margin-bottom: 30px;
+}
+
+
+.login-input {
+    width: 20rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    border-radius: 7px;
+    padding: 8px;
+}
+
+.login-button {
+    width: 8rem;
+    height: 2rem;
+    border-radius: 7px;
+    background-color: #AD260B;
+    color: white;
+    cursor: pointer;
+}
+
+.error-message {
+    color: rgb(161, 7, 7);
+}
+
+button {
+    font-size: 20px;
+}
