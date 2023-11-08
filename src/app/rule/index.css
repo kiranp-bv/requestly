@@ -1,0 +1,32 @@
+
+
+.field-section {
+    margin-bottom: 30px;
+}
+
+
+.input {
+    width: 100%;
+    height: 2rem;
+    font-size: 1rem;
+    border-radius: 3px;
+    padding: 8px;
+}
+
+.update-button {
+    width: 12rem;
+    height: 2rem;
+    border-radius: 7px;
+    background-color: #AD260B;
+    color: white;
+    cursor: pointer;
+    border-color: #AD260B;
+}
+
+.error-message {
+    color: rgb(161, 7, 7);
+}
+
+button {
+    font-size: 20px;
+}
