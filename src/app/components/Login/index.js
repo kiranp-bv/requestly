@@ -1,7 +1,10 @@
 'use client';
 import './index.css'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
+
 const Login = () => {
+    const router = useRouter()
     const errorMessages = {
         userName: {
             required: 'Required!'
@@ -82,6 +85,26 @@ const Login = () => {
         const hasError = handleErrors({focus: true});
         if (!hasError) {
             console.log(`Handling login for creds: ${userName.value}/${password.value}`);
+
+            fetch("http://localhost:3000/login", {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                  },
+                body: JSON.stringify({ userName: userName.value, password: password.value})
+              }).then(response => response.json()
+            ).then((data) => {
+                if(data && data.loginSuccess) {
+                    router.push('/rules')
+                    console.log("Login successful!");
+                }
+            }).catch(
+                (e) => {
+                    console.log("Error in login API: ", e.message);
+                }
+            )
         }
     }
 
