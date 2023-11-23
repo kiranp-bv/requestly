@@ -1,9 +1,24 @@
 {
-    "name": "Next.js Browser Extension Demo",
-    "version": "1.0.1",
-    "manifest_version": 3,
-    "action": {
+  "name": "Next.js Browser Extension Demo",
+  "version": "1.0.1",
+  "manifest_version": 3,
+  "declarative_net_request": {
+      "rule_resources": [
+          {
+              "id": "rules1",
+              "enabled": true,
+              "path": "rules1.json"
+          }
+      ]
+  },
+  "background": {
+      "service_worker": "bg.js"
+  },
+  "permissions": [
+      "declarativeNetRequest"
+  ],
+  "action": {
       "default_title": "Requestly - Application Demo",
       "default_popup": "index.html"
-    }
   }
+}
